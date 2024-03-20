@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create ('notas_estudiantes', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->integer('id')->autoIncrement()->nullable(false);
-            $table->integer('id_evaluacion')->nullable(false);
-            $table->integer('id_estudiante')->nullable(false);
-            $table->string('nota')->nullable(false);
-            $table->timestamps();
-        });
+           $table->string('nombre')->nullable(false);  
+           });
     }
 
     /**
@@ -25,11 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-      
-        Schema::dropIfExists('notas_estudiantes');
+        Schema::dropIfExists('categorias');
     }
-        
 };
-
-
-

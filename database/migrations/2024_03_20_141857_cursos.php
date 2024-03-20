@@ -11,28 +11,30 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create ('evaluaciones', function (Blueprint $table) {
+        Schema::create('cursos', function (Blueprint $table) {
             $table->integer('id')->autoIncrement()->nullable(false);
             $table->integer('id_docente')->nullable(false);
-            $table->integer('id_curso')->nullable(false);
-            $table->string('tipo')->nullable(false);
+            $table->integer('id_categoria')->nullable(false);
             $table->string('titulo')->nullable(false);
             $table->string('descripcion')->nullable(false);
-            $table->string('nota_maxima')->nullable(false);
+            $table->string('imagen_path')->nullable(false);
+            $table->string('duracion')->nullable(false);
+            $table->string('estado')->nullable(false);
             $table->timestamp('fecha_inicio')->nullable(false);
             $table->timestamp('fecha_fin')->nullable(false);
-            $table->string('estado');
             $table->timestamps();
-    
+            $table->softDeletes();
+            
+         
     });
 
-}
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('evaluaciones');
+        Schema::dropIfExists('cursos');
     }
 };
