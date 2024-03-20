@@ -3,6 +3,7 @@
 use App\Http\Controllers\EvaluacionesController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ComentariosController;
+use App\Http\Controllers\NotasEstudiantesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,5 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('/usuarios',UsuarioController::class) ;
 Route::apiResource('/evaluaciones',EvaluacionesController::class) ;
 Route::apiResource('/comentarios',ComentariosController::class) ;
- 
+Route::apiResource('/notas-estudiantes', NotasEstudiantesController::class) ;
 
