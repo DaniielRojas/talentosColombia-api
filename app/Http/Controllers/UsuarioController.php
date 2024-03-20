@@ -9,7 +9,6 @@ use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
- 
 class UsuarioController extends Controller
 {
     public function index(): JsonResponse
